@@ -1,0 +1,27 @@
+Standard Package 1st Person Controller Works out the box with the following changes
+ 1. Go to edit/project settings/input
+ 2. Scroll down to Mouse X and adjust:
+	a) Sensitivy = 0.4
+	b) Type = Joystick Axis
+	c) Axis = 4th Axis (Joysticks)
+	d) Joy Num = Get motion from all Joysticks
+ 3. Scroll down to Mouse X and adjust:
+	a) Sensitivy = 0.4
+	b) Type = Joystick Axis
+	c) Axis = 4th Axis (Joysticks)
+	d) Joy Num = Get motion from all Joysticks
+
+
+You can trigger an event from any button (see http://wiki.unity3d.com/index.php?title=Xbox360Controller for button references).
+if (Input.GetKeyDown("joystick button 0"))
+  {
+     do this;
+  }
+
+More details in input reference documentation: https://docs.unity3d.com/ScriptReference/Input.html
+
+
+Notes:
+1. This assumes you are only targetting windows (which we are for simplicty)
+2. The left trigger is represented by the range -1 to 0, while the right trigger is represented by the range 0 to 1.
+3. All return values are strings
