@@ -8,6 +8,7 @@ namespace UnityStandardAssets.Vehicles.Car
     {
         [SerializeField] private float m_PersistTime;
 
+        public float PersistTime { get => m_PersistTime; set => m_PersistTime = value; }
 
         private IEnumerator Start()
         {
@@ -17,7 +18,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 if (transform.parent.parent == null)
                 {
-					Destroy(gameObject, m_PersistTime);
+					Destroy(gameObject, PersistTime);
                 }
             }
         }
